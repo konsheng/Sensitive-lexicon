@@ -1,2 +1,28 @@
-# Sensitive-lexicon
-Creating a sensitive word library aims to establish a collection of terms for identifying and filtering inappropriate or offensive language in text content, thereby protecting users from harmful information and maintaining a healthy communication environment. 创建敏感词库旨在建立一个词汇集，用于识别和过滤文本内容中的不当或不适宜的语言，以保护用户免受有害信息的影响并维持沟通环境的健康。
+# 敏感词库项目 Sensitive-lexicon
+
+## 简介
+本项目旨在创建和维护一个中文敏感词库，用于帮助开发者和内容管理者识别和过滤文本内容中的不当或不适宜的语言。通过使用本敏感词库，可以有效防止有害信息的传播，维护在线环境的健康和秩序。
+
+## 功能特点
+- **广泛的词汇覆盖**：包含各类敏感词汇，涵盖政治、色情、暴力等多个领域。
+- **定期更新**：随着社会环境和语言使用的变化，我们会定期更新词库，确保其时效性和准确性。
+- **易于集成**：提供简单易懂的本地部署API接口，方便开发者在各种应用程序和系统中快速集成和使用。(开发中)
+- **开源共享**：鼓励社区成员贡献和分享，共同完善敏感词库。
+
+## 使用说明
+1. **集成到项目**：下载敏感词库文件，根据您的项目需求，选择合适的方式集成。
+2. **调用API**：如果您希望通过API接口使用，可以参考我们的API文档进行调用。
+3. **贡献词汇**：我们欢迎社区成员贡献新的敏感词汇。请通过Pull Request或Issue的形式提交您的建议。
+
+## 注意事项
+- 在使用敏感词库时，请确保您的应用遵守当地法律法规。
+- 敏感词的定义可能因文化、地区和语境而异，使用时请加以判断和适当调整。
+
+## 开源许可
+本项目采用[MIT许可证](LICENSE)，您可以自由使用、修改和分发，但需要保留版权和许可声明。
+
+## 联系方式
+如果您有任何问题或建议，请通过以下方式联系我们：
+- Email: [konsheng@outlook.com](mailto:konsheng@outlook.com)
+
+感谢您对本项目的支持和贡献
