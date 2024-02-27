@@ -1,6 +1,6 @@
 # 敏感词库项目 Sensitive-lexicon
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon) 词汇更新中, 预计10W+
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon) 词汇更新中, 预计10W+, 框架开发中
 
 ## 简介
 本项目旨在创建和维护一个中文敏感词库，用于帮助开发者和内容管理者识别和过滤文本内容中的不当或不适宜的语言。通过使用本敏感词库，可以有效防止有害信息的传播，维护在线环境的健康和秩序。
