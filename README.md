@@ -30,4 +30,10 @@
 感谢您对本项目的支持和贡献
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date)](https://star-history.com/#konsheng/Sensitive-lexicon&Date)
+<a href="https://star-history.com/#konsheng/Sensitive-lexicon&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
+  </picture>
+</a>
