@@ -28,6 +28,10 @@
 如果您有任何问题或建议，请通过以下方式联系我们：
 - Email: [konsheng@outlook.com](mailto:konsheng@outlook.com)
 
+## 项目支持
+中国数字时代 https://chinadigitaltimes.net
+农业科学院信息化办公室
+
 感谢您对本项目的支持和贡献
 
 ## Star History
