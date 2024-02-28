@@ -1,7 +1,6 @@
 # 敏感词库项目 Sensitive-lexicon
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon) 
-![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Konsheng/Sensitive-lexicon/total)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon)
 ![GitHub License](https://img.shields.io/github/license/Konsheng/Sensitive-lexicon)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Konsheng/Sensitive-lexicon)
 
