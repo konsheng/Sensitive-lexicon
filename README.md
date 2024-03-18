@@ -23,10 +23,6 @@
 ## 开源许可
 本项目采用[MIT许可证](LICENSE)，您可以自由使用、修改和分发，但需要保留版权和许可声明。
 
-## 联系方式
-如果您有任何问题或建议，请通过以下方式联系我们：
-- Email: [konsheng@outlook.com](mailto:konsheng@outlook.com)
-
 ## 项目支持
 中国数字时代 https://chinadigitaltimes.net
 
