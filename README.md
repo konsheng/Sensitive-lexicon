@@ -1,34 +1,69 @@
-# 敏感词库 Sensitive-lexicon
+# Sensitive-lexicon (中文敏感词库)
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon)
-![GitHub License](https://img.shields.io/github/license/Konsheng/Sensitive-lexicon)
-![GitHub Repo stars](https://img.shields.io/github/stars/Konsheng/Sensitive-lexicon)
+![Commit Activity](https://img.shields.io/github/commit-activity/y/Konsheng/Sensitive-lexicon)
+![License: MIT](https://img.shields.io/github/license/Konsheng/Sensitive-lexicon)
+![GitHub stars](https://img.shields.io/github/stars/Konsheng/Sensitive-lexicon)
+
+> **一个持续更新的中文敏感词库，帮助开发者和内容审核者快速识别并过滤不当文本。**
+
+## 目录
+
+* [简介](#简介)
+* [功能特点](#功能特点)
+* [快速开始](#快速开始)
+
+  * [集成到项目](#集成到项目)
+  * [贡献词汇](#贡献词汇)
+* [注意事项](#注意事项)
+* [开源许可](#开源许可)
+* [项目支持与致谢](#项目支持与致谢)
 
 ## 简介
-本项目旨在创建和维护一个中文敏感词库，用于帮助开发者和内容管理者识别和过滤文本内容中的不当或不适宜的语言。通过使用本敏感词库，可以有效防止有害信息的传播，维护在线环境的健康和秩序。
+
+Sensitive‑lexicon 提供了一份广泛覆盖政治、色情、暴力等敏感领域的词汇列表，方便快速嵌入任何文本审核流程，并通过社区协作保持长期更新。
 
 ## 功能特点
-- **广泛的词汇覆盖**：包含各类敏感词汇，涵盖政治、色情、暴力等多个领域。
-- **定期更新**：随着社会环境和语言使用的变化，我们会定期更新词库，确保其时效性和准确性。
-- **开源共享**：鼓励社区成员贡献和分享，共同完善敏感词库。
 
-## 使用说明
-1. **集成到项目**：下载敏感词库文件，根据您的项目需求，选择合适的方式集成。
-2. **贡献词汇**：我们欢迎社区成员贡献新的敏感词汇。请通过Pull Request或Issue的形式提交您的建议。
+* **广泛覆盖**：涵盖数万条词汇，覆盖主流敏感领域。
+* **持续更新**：根据社会语境变化定期更新，保持时效性与准确性。
+* **易于集成**：纯文本格式，可在任意语言/框架中直接引用。
+* **社区驱动**：欢迎 Issue / PR，携手打造更完整的词库。
+
+## 快速开始
+
+### 集成到项目
+
+1. 克隆或下载本仓库。
+2. 在您的代码中读取 `sensitive-lexicon.txt`（或您需要的分支文件）。
+3. 根据业务场景，选择合适的匹配算法（如 DFA、Trie、正则表达式等）进行过滤。
+
+```bash
+# 示例：使用 Git 克隆
+git clone https://github.com/Konsheng/Sensitive-lexicon.git
+```
+
+### 贡献词汇
+
+* **Pull Request**：在 `data/` 目录新增或修改词条，并提交 PR。
+* **Issue**：如果不确定具体实现，欢迎通过 Issue 提出建议或讨论。
+
+> **提示**：PR 请附上来源或用例，便于维护者审核。
 
 ## 注意事项
-- 在使用敏感词库时，请确保您的应用遵守当地法律法规。
-- 敏感词的定义可能因文化、地区和语境而异，使用时请加以判断和适当调整。
+
+* 使用时请遵守当地法律法规及平台政策。
+* 敏感词定义受文化/地域/语境影响，实际应用中请结合业务需求自行评估与调整。
 
 ## 开源许可
-本项目采用[MIT许可证](LICENSE)，您可以自由使用、修改和分发，但需要保留版权和许可声明。
 
-## 项目支持
-中国数字时代 https://chinadigitaltimes.net
+本项目采用 **MIT License**，在保留版权与许可声明的前提下，可自由使用、修改与分发。
 
-农业科学院信息化办公室
+## 项目支持与致谢
 
-感谢您对本项目的支持和贡献
+* **中国数字时代** ([https://chinadigitaltimes.net](https://chinadigitaltimes.net))
+* **中国农业科学院信息化办公室**
+
+感谢所有贡献者的关注与支持！
 
 ## Star History
 <a href="https://star-history.com/#konsheng/Sensitive-lexicon&Date">
