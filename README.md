@@ -44,7 +44,7 @@ git clone https://github.com/Konsheng/Sensitive-lexicon.git
 
 ### 贡献词汇
 
-* **Pull Request**：在 `data/` 目录新增或修改词条，并提交 PR。
+* **Pull Request**：在 `Vocabulary/` 目录新增或修改词条，并提交 PR。
 * **Issue**：如果不确定具体实现，欢迎通过 Issue 提出建议或讨论。
 
 > **提示**：PR 请附上来源或用例，便于维护者审核。
