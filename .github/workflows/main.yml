@@ -1,10 +1,10 @@
-name: 手动或自动上传 Release 包
+name: 自动测试压缩
 
 on:
   push:
     tags:
-      - '*'  # 自动触发：打 tag 时运行
-  workflow_dispatch:     # 手动触发支持
+      - '*'
+  workflow_dispatch:
     inputs:
       tag_name:
         description: '请输入 tag 名（如 1.0）'
@@ -19,7 +19,6 @@ jobs:
       - name: 拉取代码
         uses: actions/checkout@v3
 
-      # 设置 tag 名 和 zip 文件名
       - name: 设置 Tag 和文件名
         id: release_info
         run: |
@@ -35,15 +34,3 @@ jobs:
       - name: 压缩项目
         run: |
           zip -r ${{ steps.release_info.outputs.file_name }} . -x '*.git*'
-
-      # 🎯 关键就在这！明确告诉 action 使用哪个 tag 来上传 release！
-      - name: 上传到 GitHub Release
-        uses: softprops/action-gh-release@v2
-        with:
-          tag_name: ${{ steps.release_info.outputs.tag_name }}
-          name: "Sensitive-lexicon ${{ steps.release_info.outputs.tag_name }}"
-          files: ${{ steps.release_info.outputs.file_name }}
-          draft: false
-          prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
