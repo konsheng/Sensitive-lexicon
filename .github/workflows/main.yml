@@ -1,0 +1,48 @@
+name: 自动打包发布 Release
+
+# ✨ 支持两种触发方式：
+# 1. 推送 tag（比如 1.0）
+# 2. 手动触发（GitHub UI 中点按钮）
+on:
+  push:
+    tags:
+      - '*'      # 支持所有 tag，比如 1.0、2.0.1 等
+  workflow_dispatch:  # 支持手动触发
+    inputs:
+      tag_name:
+        description: '手动输入 Tag 名称（如 1.0）'
+        required: true
+        default: '1.0'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 拉取代码
+        uses: actions/checkout@v3
+
+      # ✨ 判断 tag 是来自自动还是手动
+      - name: 设置文件名
+        id: release_info
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG_NAME=${{ github.event.inputs.tag_name }}
+          else
+            TAG_NAME=${GITHUB_REF##*/}
+          fi
+          FILE_NAME="Sensitive-lexicon-${TAG_NAME}.zip"
+          echo "tag_name=${TAG_NAME}" >> $GITHUB_OUTPUT
+          echo "file_name=${FILE_NAME}" >> $GITHUB_OUTPUT
+
+      - name: 压缩项目文件
+        run: |
+          zip -r ${{ steps.release_info.outputs.file_name }} . -x '*.git*'
+
+      - name: 上传到 GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.release_info.outputs.tag_name }}
+          files: ${{ steps.release_info.outputs.file_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
