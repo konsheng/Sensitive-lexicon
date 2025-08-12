@@ -4,12 +4,6 @@ on:
   push:
     tags:
       - '*'
-  workflow_dispatch:
-    inputs:
-      tag_name:
-        description: '请输入 tag 名（如 1.0）'
-        required: true
-        default: '1.0'
 
 jobs:
   release:
