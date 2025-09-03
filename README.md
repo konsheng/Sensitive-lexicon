@@ -82,3 +82,21 @@ git clone https://github.com/Konsheng/Sensitive-lexicon.git
     <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
   </picture>
 </a>
+
+## 运行敏感词检测服务（Fiber + fuzzy-patricia）
+
+```bash
+# Windows PowerShell 示例
+$env:PORT="8080"; $env:LEXICON_DIR="Vocabulary"; $env:FUZZY_MAX_DISTANCE="1"
+
+# 构建并运行
+go mod tidy
+go build -o bin\server.exe ./cmd/server
+./bin/server.exe
+```
+
+- POST `/detect`
+  - 请求体: `{ "text": "待检测文本", "enable_fuzzy": true }`
+  - 响应: `{ "hits": [{"word":"...","type":"substring|fuzzy","distance":0}] }`
+- POST `/reload` 重新加载 `Vocabulary` 目录
+- GET `/health` 存活探针
