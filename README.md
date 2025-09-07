@@ -33,6 +33,7 @@ Sensitive‑lexicon 提供了一份广泛覆盖政治、色情、暴力等敏感
 ```
 Sensitive-lexicon/
 ├── ThirdPartyCompatibleFormats/        # 用于第三方格式
+├── Organized/                          # 已经进行整理的词库
 ├── Vocabulary/                         # 词汇库
 ├── LICENSE                             # 许可证
 └── README.md                           # 项目说明
@@ -43,7 +44,7 @@ Sensitive-lexicon/
 ### 集成到项目
 
 1. 克隆或下载本仓库。
-2. 在您的代码中读取 `sensitive-lexicon.txt`（或您需要的分支文件）。
+2. 在您的代码中读取 `词库中的 .txt 文件`（或您需要的分支文件）。
 3. 根据业务场景，选择合适的匹配算法（如 DFA、Trie、正则表达式等）进行过滤。
 
 ```bash
