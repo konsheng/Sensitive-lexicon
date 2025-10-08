@@ -5,7 +5,7 @@ pipeline {
   environment {
     GO111MODULE = 'on'        // 开启 Modules 模式
     CGO_ENABLED = '0'
-    APP_NAME = 'Sensitive-lexicon'
+    APP_NAME = 'sensitive-lexicon'
     REGISTRY = 'crpi-vqe38j3xeblrq0n4.cn-hangzhou.personal.cr.aliyuncs.com/go-mctown'
   }
 
