@@ -1,0 +1,68 @@
+# Go build artifacts
+bin/
+build/
+dist/
+out/
+
+# Executables and shared libs
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test and coverage outputs
+*.test
+coverage.out
+*.coverprofile
+cover/
+
+# Logs
+*.log
+logs/
+
+# Env files
+.env
+.env.*
+.envrc
+
+# Caches & temp
+.cache/
+tmp/
+
+# Profiling & traces
+*.prof
+*.pprof
+trace.out
+
+# PID and backup files
+*.pid
+*.bak
+*.orig
+
+# Editor swap files
+*.swp
+*.swo
+~*
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Keys & certs (avoid committing secrets)
+*.pem
+*.key
+*.crt
+*.cert
