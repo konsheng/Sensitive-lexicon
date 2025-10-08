@@ -9,6 +9,9 @@ RUN go mod download
 # Copy source
 COPY . .
 
+# Normalize and tidy modules inside build context
+RUN go mod tidy
+
 # Build static binary for target platform
 ARG TARGETOS
 ARG TARGETARCH
