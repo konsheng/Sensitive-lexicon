@@ -1,0 +1,27 @@
+.git
+.github
+.idea
+.vscode
+Dockerfile
+.dockerignore
+
+# Build outputs
+bin/
+build/
+dist/
+out/
+
+# Archives & temp
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.log
+*.tmp
+*.swp
+~*
+
+# Optional: exclude non-runtime assets
+Organized/
+ThirdPartyCompatibleFormats/

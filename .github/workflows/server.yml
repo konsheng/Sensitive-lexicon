@@ -8,6 +8,10 @@ on:
   pull_request:
     branches: [ "dev", "master" ]
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   build:
     name: Build server binaries
@@ -73,3 +77,56 @@ jobs:
           prerelease: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  docker:
+    name: Build and push Docker image
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine image name and tags
+        id: imagetags
+        shell: bash
+        run: |
+          IMAGE="ghcr.io/${{ github.repository_owner }}/sensitive-lexicon-server"
+          echo "IMAGE=$IMAGE" >> $GITHUB_ENV
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "PUSH=false" >> $GITHUB_ENV
+            echo "TAGS=${IMAGE}:pr-${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+          elif [ "${{ github.ref_type }}" = "tag" ]; then
+            echo "PUSH=true" >> $GITHUB_ENV
+            echo "TAGS=${IMAGE}:${{ github.ref_name }},${IMAGE}:latest" >> $GITHUB_ENV
+          else
+            BRANCH="${{ github.ref_name }}"
+            echo "PUSH=true" >> $GITHUB_ENV
+            if [ "$BRANCH" = "dev" ] || [ "$BRANCH" = "master" ]; then
+              echo "TAGS=${IMAGE}:latest,${IMAGE}:sha-${{ github.sha }}" >> $GITHUB_ENV
+            else
+              echo "TAGS=${IMAGE}:branch-${BRANCH},${IMAGE}:sha-${{ github.sha }}" >> $GITHUB_ENV
+            fi
+          fi
+          echo "Using tags: $TAGS"
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: ${{ env.PUSH }}
+          tags: ${{ env.TAGS }}
