@@ -2,11 +2,11 @@ name: Server CI/CD
 
 on:
   push:
-    branches: [ "main", "master" ]
+    branches: [ "dev", "master" ]
     tags:
       - '*'
   pull_request:
-    branches: [ "main", "master" ]
+    branches: [ "dev", "master" ]
 
 jobs:
   build:
