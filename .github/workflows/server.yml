@@ -46,7 +46,7 @@ jobs:
             go build -trimpath -ldflags="-s -w" -o "build/${OUT}" ./cmd/server
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: server-${{ matrix.goos }}-${{ matrix.goarch }}
           path: build/server-${{ matrix.goos }}-${{ matrix.goarch }}*
@@ -58,7 +58,7 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/')
     steps:
       - name: Download artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           path: dist
 
