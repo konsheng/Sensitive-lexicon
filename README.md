@@ -92,11 +92,11 @@ git clone https://github.com/Konsheng/Sensitive-lexicon.git
   - 环境变量：`PORT`, `LEXICON_DIR`, `FUZZY_MIN_NGRAM`, `FUZZY_MAX_NGRAM`, `FUZZY_MAX_DISTANCE`
 
 ## Star History
-<a href="https://star-history.com/#konsheng/Sensitive-lexicon&Date">
+<a href="https://star-history.dera.page/#konsheng/Sensitive-lexicon&type=Date">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=konsheng/Sensitive-lexicon&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
+    <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=konsheng/Sensitive-lexicon&type=Date" />
   </picture>
 </a>
 
